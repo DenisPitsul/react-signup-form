@@ -54,11 +54,11 @@ function SignUpForm() {
     setIsAgree(false);
   };
 
-  const isPasswordConfirmationValid =
-    SIGN_UP_FOR_REG_EXP.password.test(passwordCofirmation) &&
-    password === passwordCofirmation;
-
   const isSubmitBtnDisabled = () => {
+    const isPasswordConfirmationValid =
+      SIGN_UP_FOR_REG_EXP.password.test(passwordCofirmation) &&
+      password === passwordCofirmation;
+
     return !(
       SIGN_UP_FOR_REG_EXP.name.test(name) &&
       SIGN_UP_FOR_REG_EXP.email.test(email) &&
